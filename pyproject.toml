@@ -1,0 +1,16 @@
+[project]
+name = "vision"
+version = "0.0"
+requires-python = ">= 3.12"
+dependencies = [
+  # current Colab versions
+  "numpy        == 2.0.*",
+  "matplotlib   == 3.10.*",
+  "scikit-image == 0.25.*",
+  # project-specific libraries
+  "watermark    == 2.4.*",
+  # local use only
+  "jupyter",
+  "nbdime",
+  "nbstripout",
+]
