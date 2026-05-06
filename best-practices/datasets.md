@@ -1,0 +1,2 @@
+- **original datasets** should be in a single ZIP file
+- each `name-subset.zip` file should extract to files inside a single `name` directory
