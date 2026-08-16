@@ -1,719 +1,714 @@
 summary:
-  method: Hough circle
+  method: Watershed regions
   parameters:
-    sigma: 5
-    low_threshold: 15
-    high_threshold: 35
-    dilation_disk: 4
-    erosion_disk: 14
-    radius_range:
-    - 20
-    - 45
-    distance_ratio: 0.08
-    peak_threshold_ratio: 0.7
+    low_marker: 50
+    high_marker: 75
+    dilation_disk: 1
+    erosion_disk: 18
+    min_area: 25
   n_images: 100
-  accuracy: 0.93
-  mean_absolute_error: 0.07
-  mean_time_seconds: 0.6015352110005915
-  mean_peak_memory_kb: 68406.9933203125
+  accuracy: 0.97
+  mean_absolute_error: 0.03
+  mean_time_seconds: 0.4225681680208072
+  mean_peak_memory_kb: 12301.3892578125
 per_image:
 - image: '100_1477154934'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5846223998814821
-  peak_memory_kb: 68407.796875
+  time_seconds: 0.4324268000200391
+  peak_memory_kb: 12301.951171875
 - image: '100_1477194726'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5688387001864612
-  peak_memory_kb: 68406.369140625
+  time_seconds: 0.4315629000775516
+  peak_memory_kb: 12301.41796875
 - image: '100_1477194840'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5987073997966945
-  peak_memory_kb: 68407.046875
+  time_seconds: 0.47274859994649887
+  peak_memory_kb: 12301.41796875
 - image: '100_1477194846'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5680040000006557
-  peak_memory_kb: 68406.7939453125
+  time_seconds: 0.4185354998335242
+  peak_memory_kb: 12301.41796875
 - image: '100_1477195062'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.599809399805963
-  peak_memory_kb: 68407.5302734375
+  time_seconds: 0.415599700063467
+  peak_memory_kb: 12301.41796875
 - image: '100_1477195068'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5924943001009524
-  peak_memory_kb: 68407.56640625
+  time_seconds: 0.41854509990662336
+  peak_memory_kb: 12301.36328125
 - image: '100_1477195152'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5938515001907945
-  peak_memory_kb: 68407.572265625
+  time_seconds: 0.4189642001874745
+  peak_memory_kb: 12301.36328125
 - image: '100_1477279902'
   real_count: 1
-  detected_count: 1
-  abs_error: 0
-  correct: true
-  time_seconds: 0.5889273998327553
-  peak_memory_kb: 68406.74609375
+  detected_count: 0
+  abs_error: 1
+  correct: false
+  time_seconds: 0.41771330032497644
+  peak_memory_kb: 12301.36328125
 - image: '100_1477281342'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5611753999255598
-  peak_memory_kb: 68406.5234375
+  time_seconds: 0.43525109998881817
+  peak_memory_kb: 12301.314453125
 - image: '100_1477281702'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5717462003231049
-  peak_memory_kb: 68406.3720703125
+  time_seconds: 0.4233924997970462
+  peak_memory_kb: 12301.38671875
 - image: '10_1477147680'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5351762999780476
-  peak_memory_kb: 68405.15234375
+  time_seconds: 0.4498686003498733
+  peak_memory_kb: 12301.38671875
 - image: '10_1477149018'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5375727000646293
-  peak_memory_kb: 68405.9697265625
+  time_seconds: 0.42905039992183447
+  peak_memory_kb: 12301.38671875
 - image: '10_1477185414'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5572979999706149
-  peak_memory_kb: 68405.267578125
+  time_seconds: 0.4303387999534607
+  peak_memory_kb: 12301.38671875
 - image: '10_1477186344'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5328171001747251
-  peak_memory_kb: 68404.525390625
+  time_seconds: 0.4224954000674188
+  peak_memory_kb: 12301.38671875
 - image: '10_1477186680'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5681453999131918
-  peak_memory_kb: 68404.94140625
+  time_seconds: 0.4226306998170912
+  peak_memory_kb: 12301.38671875
 - image: '10_1477186872'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5348624000325799
-  peak_memory_kb: 68405.0849609375
+  time_seconds: 0.4200487998314202
+  peak_memory_kb: 12301.38671875
 - image: '10_1477187238'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5402595000341535
-  peak_memory_kb: 68405.17578125
+  time_seconds: 0.42118029994890094
+  peak_memory_kb: 12301.38671875
 - image: '10_1477287960'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5324477003887296
-  peak_memory_kb: 68405.0634765625
+  time_seconds: 0.4204773004166782
+  peak_memory_kb: 12301.38671875
 - image: '10_1477288230'
   real_count: 1
-  detected_count: 0
-  abs_error: 1
-  correct: false
-  time_seconds: 0.5022133998572826
-  peak_memory_kb: 68403.7412109375
+  detected_count: 1
+  abs_error: 0
+  correct: true
+  time_seconds: 0.41858250042423606
+  peak_memory_kb: 12301.38671875
 - image: '10_1477288452'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5278075998649001
-  peak_memory_kb: 68404.615234375
+  time_seconds: 0.41766380006447434
+  peak_memory_kb: 12301.38671875
 - image: '10_1477288620'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5382138001732528
-  peak_memory_kb: 68404.9169921875
+  time_seconds: 0.41688270028680563
+  peak_memory_kb: 12301.38671875
 - image: '10_1477288818'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5239931996911764
-  peak_memory_kb: 68404.51953125
+  time_seconds: 0.4623211999423802
+  peak_memory_kb: 12301.38671875
 - image: '10_1477289028'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5357344001531601
-  peak_memory_kb: 68405.2763671875
+  time_seconds: 0.41724180011078715
+  peak_memory_kb: 12301.38671875
 - image: '10_1477289316'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5280683999881148
-  peak_memory_kb: 68404.8681640625
+  time_seconds: 0.43805669993162155
+  peak_memory_kb: 12301.38671875
 - image: '10_1477289394'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5328073003329337
-  peak_memory_kb: 68404.8642578125
+  time_seconds: 0.4129127999767661
+  peak_memory_kb: 12301.38671875
 - image: '10_1477289640'
   real_count: 1
-  detected_count: 0
+  detected_count: 2
   abs_error: 1
   correct: false
-  time_seconds: 0.4990598000586033
-  peak_memory_kb: 68403.7900390625
+  time_seconds: 0.4167790003120899
+  peak_memory_kb: 12301.38671875
 - image: '10_1477787706'
   real_count: 2
   detected_count: 2
   abs_error: 0
   correct: true
-  time_seconds: 0.587557699996978
-  peak_memory_kb: 68406.607421875
+  time_seconds: 0.4171931999735534
+  peak_memory_kb: 12301.38671875
 - image: '10_1477788054'
   real_count: 2
   detected_count: 2
   abs_error: 0
   correct: true
-  time_seconds: 0.5826057996600866
-  peak_memory_kb: 68406.6435546875
+  time_seconds: 0.4161168998107314
+  peak_memory_kb: 12301.38671875
 - image: '110_1479347454'
   real_count: 8
   detected_count: 8
   abs_error: 0
   correct: true
-  time_seconds: 0.865920300129801
-  peak_memory_kb: 68413.865234375
+  time_seconds: 0.4201657003723085
+  peak_memory_kb: 12301.38671875
 - image: '120_1479351576'
   real_count: 12
   detected_count: 12
   abs_error: 0
   correct: true
-  time_seconds: 0.9569397000595927
-  peak_memory_kb: 68414.435546875
+  time_seconds: 0.4217660999856889
+  peak_memory_kb: 12301.38671875
 - image: '125_1479424530'
   real_count: 3
   detected_count: 3
   abs_error: 0
   correct: true
-  time_seconds: 0.6557292998768389
-  peak_memory_kb: 68408.60546875
+  time_seconds: 0.4149667997844517
+  peak_memory_kb: 12301.38671875
 - image: '125_1479424824'
   real_count: 4
   detected_count: 4
   abs_error: 0
   correct: true
-  time_seconds: 0.6756994999013841
-  peak_memory_kb: 68408.4365234375
+  time_seconds: 0.4118677000515163
+  peak_memory_kb: 12301.38671875
 - image: '130_1477861932'
   real_count: 12
   detected_count: 12
   abs_error: 0
   correct: true
-  time_seconds: 0.9349686000496149
-  peak_memory_kb: 68414.5478515625
+  time_seconds: 0.42371949972584844
+  peak_memory_kb: 12301.38671875
 - image: '130_1477862496'
   real_count: 4
   detected_count: 4
   abs_error: 0
   correct: true
-  time_seconds: 0.6651518000289798
-  peak_memory_kb: 68408.3408203125
+  time_seconds: 0.41746480017900467
+  peak_memory_kb: 12301.38671875
 - image: '130_1477862928'
   real_count: 3
   detected_count: 3
   abs_error: 0
   correct: true
-  time_seconds: 0.662623000331223
-  peak_memory_kb: 68408.453125
+  time_seconds: 0.41338289994746447
+  peak_memory_kb: 12301.38671875
 - image: '135_1479425910'
   real_count: 5
   detected_count: 5
   abs_error: 0
   correct: true
-  time_seconds: 0.6984601998701692
-  peak_memory_kb: 68409.357421875
+  time_seconds: 0.4183741002343595
+  peak_memory_kb: 12301.38671875
 - image: '135_1479425994'
   real_count: 5
   detected_count: 5
   abs_error: 0
   correct: true
-  time_seconds: 0.6891632000915706
-  peak_memory_kb: 68409.998046875
+  time_seconds: 0.43891429994255304
+  peak_memory_kb: 12301.38671875
 - image: '150_1477864524'
   real_count: 6
   detected_count: 6
   abs_error: 0
   correct: true
-  time_seconds: 0.7186806998215616
-  peak_memory_kb: 68409.0029296875
+  time_seconds: 0.43180570006370544
+  peak_memory_kb: 12301.38671875
 - image: '150_1479429786'
   real_count: 6
   detected_count: 6
   abs_error: 0
   correct: true
-  time_seconds: 0.8198339999653399
-  peak_memory_kb: 68413.6005859375
+  time_seconds: 0.41721369978040457
+  peak_memory_kb: 12301.38671875
 - image: '15_1477788198'
   real_count: 3
   detected_count: 3
   abs_error: 0
   correct: true
-  time_seconds: 0.6191529999487102
-  peak_memory_kb: 68407.1201171875
+  time_seconds: 0.4148201998323202
+  peak_memory_kb: 12301.38671875
 - image: '20_1477788648'
   real_count: 3
   detected_count: 3
   abs_error: 0
   correct: true
-  time_seconds: 0.617089600302279
-  peak_memory_kb: 68406.7666015625
+  time_seconds: 0.4189708000048995
+  peak_memory_kb: 12301.38671875
 - image: '25_1477149234'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5563249001279473
-  peak_memory_kb: 68405.84765625
+  time_seconds: 0.4424288999289274
+  peak_memory_kb: 12301.38671875
 - image: '25_1477149264'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5637881001457572
-  peak_memory_kb: 68406.041015625
+  time_seconds: 0.4321689000353217
+  peak_memory_kb: 12301.38671875
 - image: '25_1477149540'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5625948999077082
-  peak_memory_kb: 68405.9912109375
+  time_seconds: 0.4264358999207616
+  peak_memory_kb: 12301.38671875
 - image: '25_1477149552'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5532578998245299
-  peak_memory_kb: 68405.9033203125
+  time_seconds: 0.42254560021683574
+  peak_memory_kb: 12301.337890625
 - image: '25_1477153938'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5624585002660751
-  peak_memory_kb: 68405.9951171875
+  time_seconds: 0.42372750025242567
+  peak_memory_kb: 12301.337890625
 - image: '25_1477154160'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5565920998342335
-  peak_memory_kb: 68406.2861328125
+  time_seconds: 0.42420500004664063
+  peak_memory_kb: 12301.38671875
 - image: '25_1477191444'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5578959998674691
-  peak_memory_kb: 68406.0439453125
+  time_seconds: 0.42081259982660413
+  peak_memory_kb: 12301.38671875
 - image: '25_1477191822'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5501876003108919
-  peak_memory_kb: 68405.6669921875
+  time_seconds: 0.42316049989312887
+  peak_memory_kb: 12301.38671875
 - image: '25_1477191930'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5533265001140535
-  peak_memory_kb: 68405.998046875
+  time_seconds: 0.42422120040282607
+  peak_memory_kb: 12301.38671875
 - image: '25_1477192050'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5485976999625564
-  peak_memory_kb: 68405.6171875
+  time_seconds: 0.4200304998084903
+  peak_memory_kb: 12301.38671875
 - image: '25_1477192098'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5364458998665214
-  peak_memory_kb: 68405.423828125
+  time_seconds: 0.4180099996738136
+  peak_memory_kb: 12301.38671875
 - image: '25_1477285272'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5578776001930237
-  peak_memory_kb: 68406.3857421875
+  time_seconds: 0.4173703999258578
+  peak_memory_kb: 12301.38671875
 - image: '25_1477286088'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5408696997910738
-  peak_memory_kb: 68406.185546875
+  time_seconds: 0.4186420999467373
+  peak_memory_kb: 12301.38671875
 - image: '25_1477287084'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5478441002778709
-  peak_memory_kb: 68406.03125
+  time_seconds: 0.41805019974708557
+  peak_memory_kb: 12301.38671875
 - image: '25_1477287240'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5534843998029828
-  peak_memory_kb: 68406.0859375
+  time_seconds: 0.4196367999538779
+  peak_memory_kb: 12301.38671875
 - image: '35_1477789932'
   real_count: 5
   detected_count: 5
   abs_error: 0
   correct: true
-  time_seconds: 0.666557400021702
-  peak_memory_kb: 68408.498046875
+  time_seconds: 0.4199465997517109
+  peak_memory_kb: 12301.38671875
 - image: '45_1477835556'
   real_count: 4
   detected_count: 4
   abs_error: 0
   correct: true
-  time_seconds: 0.6628594002686441
-  peak_memory_kb: 68408.6044921875
+  time_seconds: 0.4241459001787007
+  peak_memory_kb: 12301.38671875
 - image: '45_1477837002'
   real_count: 5
   detected_count: 5
   abs_error: 0
   correct: true
-  time_seconds: 0.6541203996166587
-  peak_memory_kb: 68408.26171875
+  time_seconds: 0.42386680003255606
+  peak_memory_kb: 12301.38671875
 - image: '50_1477144650'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5451426999643445
-  peak_memory_kb: 68406.0947265625
+  time_seconds: 0.4214892997406423
+  peak_memory_kb: 12301.38671875
 - image: '50_1477144668'
   real_count: 1
-  detected_count: 1
-  abs_error: 0
-  correct: true
-  time_seconds: 0.5427385000512004
-  peak_memory_kb: 68405.8271484375
+  detected_count: 0
+  abs_error: 1
+  correct: false
+  time_seconds: 0.423138199839741
+  peak_memory_kb: 12301.38671875
 - image: '50_1477192782'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5287905996665359
-  peak_memory_kb: 68404.9677734375
+  time_seconds: 0.4545210003852844
+  peak_memory_kb: 12301.38671875
 - image: '50_1477192866'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5324710998684168
-  peak_memory_kb: 68405.208984375
+  time_seconds: 0.42160769971087575
+  peak_memory_kb: 12301.38671875
 - image: '50_1477192920'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5338693996891379
-  peak_memory_kb: 68405.2734375
+  time_seconds: 0.42218019999563694
+  peak_memory_kb: 12301.337890625
 - image: '50_1477193142'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5620579998940229
-  peak_memory_kb: 68406.443359375
+  time_seconds: 0.42205030005425215
+  peak_memory_kb: 12301.38671875
 - image: '50_1477193280'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5610899003222585
-  peak_memory_kb: 68406.328125
+  time_seconds: 0.4145859000273049
+  peak_memory_kb: 12301.38671875
 - image: '50_1477193592'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5369559000246227
-  peak_memory_kb: 68405.326171875
+  time_seconds: 0.41282379999756813
+  peak_memory_kb: 12301.337890625
 - image: '50_1477193862'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.536681099794805
-  peak_memory_kb: 68405.5537109375
+  time_seconds: 0.4191459999419749
+  peak_memory_kb: 12301.38671875
 - image: '50_1477193868'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5413355003111064
-  peak_memory_kb: 68405.4140625
+  time_seconds: 0.41632530000060797
+  peak_memory_kb: 12301.38671875
 - image: '50_1477194354'
   real_count: 1
-  detected_count: 0
-  abs_error: 1
-  correct: false
-  time_seconds: 0.49716729996725917
-  peak_memory_kb: 68403.6025390625
+  detected_count: 1
+  abs_error: 0
+  correct: true
+  time_seconds: 0.4170509004034102
+  peak_memory_kb: 12301.38671875
 - image: '50_1477282296'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5488304002210498
-  peak_memory_kb: 68405.6923828125
+  time_seconds: 0.41582570038735867
+  peak_memory_kb: 12301.38671875
 - image: '50_1477282482'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5313479998148978
-  peak_memory_kb: 68405.990234375
+  time_seconds: 0.41195520013570786
+  peak_memory_kb: 12301.2890625
 - image: '50_1477282950'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5403390000574291
-  peak_memory_kb: 68405.2236328125
+  time_seconds: 0.4128539999946952
+  peak_memory_kb: 12301.38671875
 - image: '50_1477283502'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5382823999971151
-  peak_memory_kb: 68405.6201171875
+  time_seconds: 0.41302469978109
+  peak_memory_kb: 12301.38671875
 - image: '55_1477839216'
   real_count: 6
   detected_count: 6
   abs_error: 0
   correct: true
-  time_seconds: 0.7240104000084102
-  peak_memory_kb: 68410.8427734375
+  time_seconds: 0.4215243998914957
+  peak_memory_kb: 12301.38671875
 - image: '55_1477842420'
   real_count: 6
   detected_count: 6
   abs_error: 0
   correct: true
-  time_seconds: 0.7173999999649823
-  peak_memory_kb: 68411.23046875
+  time_seconds: 0.4225792000070214
+  peak_memory_kb: 12301.38671875
 - image: '5_1477147104'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5378149002790451
-  peak_memory_kb: 68405.234375
+  time_seconds: 0.417219000402838
+  peak_memory_kb: 12301.38671875
 - image: '5_1477188570'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5436261999420822
-  peak_memory_kb: 68405.5126953125
+  time_seconds: 0.4193385001271963
+  peak_memory_kb: 12301.38671875
 - image: '5_1477189122'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5428756000474095
-  peak_memory_kb: 68405.4658203125
+  time_seconds: 0.41667320020496845
+  peak_memory_kb: 12301.38671875
 - image: '5_1477189272'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5408625002019107
-  peak_memory_kb: 68405.4716796875
+  time_seconds: 0.4180887001566589
+  peak_memory_kb: 12301.38671875
 - image: '5_1477289850'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5393859003670514
-  peak_memory_kb: 68405.3271484375
+  time_seconds: 0.43498510029166937
+  peak_memory_kb: 12301.38671875
 - image: '5_1477289970'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5331013998948038
-  peak_memory_kb: 68405.1708984375
+  time_seconds: 0.4145343997515738
+  peak_memory_kb: 12301.38671875
 - image: '5_1477290318'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5316661996766925
-  peak_memory_kb: 68404.5302734375
+  time_seconds: 0.44565469957888126
+  peak_memory_kb: 12301.38671875
 - image: '5_1477290336'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5369771998375654
-  peak_memory_kb: 68405.2861328125
+  time_seconds: 0.4113892000168562
+  peak_memory_kb: 12301.38671875
 - image: '5_1477290654'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5381688997149467
-  peak_memory_kb: 68405.421875
+  time_seconds: 0.41093269968405366
+  peak_memory_kb: 12301.38671875
 - image: '5_1477290918'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.538641800172627
-  peak_memory_kb: 68405.3671875
+  time_seconds: 0.41119350027292967
+  peak_memory_kb: 12301.38671875
 - image: '5_1477291068'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5365120000205934
-  peak_memory_kb: 68405.1259765625
+  time_seconds: 0.4134101001545787
+  peak_memory_kb: 12301.38671875
 - image: '5_1477291284'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5398381999693811
-  peak_memory_kb: 68405.1171875
+  time_seconds: 0.41484700003638864
+  peak_memory_kb: 12301.38671875
 - image: '5_1477291932'
   real_count: 1
   detected_count: 1
   abs_error: 0
   correct: true
-  time_seconds: 0.5372328995727003
-  peak_memory_kb: 68405.32421875
+  time_seconds: 0.41085859993472695
+  peak_memory_kb: 12301.38671875
 - image: '65_1477846296'
   real_count: 6
   detected_count: 6
   abs_error: 0
   correct: true
-  time_seconds: 0.7123587001115084
-  peak_memory_kb: 68410.58203125
+  time_seconds: 0.4206770001910627
+  peak_memory_kb: 12301.38671875
 - image: '70_1477846866'
   real_count: 6
   detected_count: 6
   abs_error: 0
   correct: true
-  time_seconds: 0.7251631999388337
-  peak_memory_kb: 68409.9970703125
+  time_seconds: 0.4221071000210941
+  peak_memory_kb: 12301.38671875
 - image: '70_1477849236'
   real_count: 4
   detected_count: 4
   abs_error: 0
   correct: true
-  time_seconds: 0.6450046002864838
-  peak_memory_kb: 68408.1123046875
+  time_seconds: 0.41871679993346334
+  peak_memory_kb: 12301.38671875
 - image: '70_1477849284'
   real_count: 4
-  detected_count: 3
-  abs_error: 1
-  correct: false
-  time_seconds: 0.6022599996067584
-  peak_memory_kb: 68406.8193359375
+  detected_count: 4
+  abs_error: 0
+  correct: true
+  time_seconds: 0.4151996001601219
+  peak_memory_kb: 12301.38671875
 - image: '80_1477850904'
   real_count: 9
-  detected_count: 8
-  abs_error: 1
-  correct: false
-  time_seconds: 0.8454960999079049
-  peak_memory_kb: 68414.0595703125
+  detected_count: 9
+  abs_error: 0
+  correct: true
+  time_seconds: 0.4202418001368642
+  peak_memory_kb: 12301.38671875
 - image: '80_1477850922'
   real_count: 9
   detected_count: 9
   abs_error: 0
   correct: true
-  time_seconds: 0.8353383997455239
-  peak_memory_kb: 68412.265625
+  time_seconds: 0.42038709996268153
+  peak_memory_kb: 12301.38671875
 - image: '80_1477851084'
   real_count: 7
   detected_count: 7
   abs_error: 0
   correct: true
-  time_seconds: 0.7849117000587285
-  peak_memory_kb: 68411.865234375
+  time_seconds: 0.43547159992158413
+  peak_memory_kb: 12301.38671875
 - image: '80_1477851738'
   real_count: 5
   detected_count: 5
   abs_error: 0
   correct: true
-  time_seconds: 0.7044728002510965
-  peak_memory_kb: 68409.4423828125
+  time_seconds: 0.4446604996919632
+  peak_memory_kb: 12301.38671875
 - image: '85_1477852902'
   real_count: 7
-  detected_count: 6
-  abs_error: 1
-  correct: false
-  time_seconds: 0.789822000078857
-  peak_memory_kb: 68411.884765625
+  detected_count: 7
+  abs_error: 0
+  correct: true
+  time_seconds: 0.41955710016191006
+  peak_memory_kb: 12301.38671875
 - image: '90_1477855650'
   real_count: 6
   detected_count: 6
   abs_error: 0
   correct: true
-  time_seconds: 0.7897033002227545
-  peak_memory_kb: 68411.2939453125
+  time_seconds: 0.4187989002093673
+  peak_memory_kb: 12301.38671875
 - image: '90_1477855704'
   real_count: 8
-  detected_count: 7
-  abs_error: 1
-  correct: false
-  time_seconds: 0.8144631995819509
-  peak_memory_kb: 68411.2763671875
+  detected_count: 8
+  abs_error: 0
+  correct: true
+  time_seconds: 0.42177450004965067
+  peak_memory_kb: 12301.38671875

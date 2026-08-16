@@ -2,3 +2,7 @@ __pycache__/
 .ipynb_checkpoints/
 .venv/
 uv.lock
+
+# full "regression" dataset (6021 images, from IEEE Dataport) - local only, never versioned
+datasets/1-coins-full-*.zip
+prepared/1-coins-full-*
