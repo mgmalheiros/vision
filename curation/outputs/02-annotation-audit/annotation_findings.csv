@@ -1,0 +1,2 @@
+relative_path,annotation_relative_path,shape_index,label,shape_type,severity,finding_type,detail
+1-coins/25_1477191408.jpg,1-coins/25_1477191408.json,3,finger,polygon,warning,polygon_point_near_boundary,"A polygon point exceeds the image boundary by 0.429px, within tolerance."

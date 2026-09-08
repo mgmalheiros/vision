@@ -1,0 +1,22 @@
+schema_version: 1
+producer: 04-duplicate-analysis.ipynb
+configuration:
+  path: curation/config.yaml
+  sha256: 24cb7bb3f27130d787ef0e071c9f28dcce3b923b7eb74bf8c3dc37acf0343a74
+inputs:
+  inventory:
+    path: curation/outputs/01-dataset-audit/inventory.csv
+    sha256: c9a61bca6dc320b3de9954c68c448698f60cad34065b4786ad8fc714098f28ce
+parameters:
+  hash: sha256
+  phash_bits: 255
+  phash_resize: 64
+  top_k_pairs: 200
+  ssim_resize: 256
+artifacts:
+- duplicate_review_candidates.csv
+- exact_duplicates.csv
+summary:
+  exact_duplicate_images: 0
+  exact_duplicate_groups: 0
+  review_candidate_pairs: 200

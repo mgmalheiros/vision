@@ -1,0 +1,31 @@
+schema_version: 1
+producer: 02-annotation-audit.ipynb
+configuration:
+  path: curation/config.yaml
+  sha256: 24cb7bb3f27130d787ef0e071c9f28dcce3b923b7eb74bf8c3dc37acf0343a74
+inputs:
+  inventory:
+    path: curation/outputs/01-dataset-audit/inventory.csv
+    sha256: c9a61bca6dc320b3de9954c68c448698f60cad34065b4786ad8fc714098f28ce
+parameters:
+  boundary_tolerance_px: 2.0
+  supported_shapes:
+  - circle
+  - polygon
+artifacts:
+- annotation_findings.csv
+- annotations_normalized.csv
+summary:
+  normalized_annotations: 21919
+  errors: 0
+  warnings: 1
+  labels:
+    '10': 7844
+    '100': 944
+    '25': 3007
+    '5': 8233
+    '50': 1771
+    finger: 120
+  shape_types:
+    circle: 21790
+    polygon: 129

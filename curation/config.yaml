@@ -1,0 +1,51 @@
+schema_version: 1
+
+dataset:
+  image_archive: 1-coins-full-image.zip
+  annotation_archive: 1-coins-full-annot.zip
+  image_directory: 1-coins-full-image
+  annotation_directory: 1-coins-full-annot
+
+classes:
+  coins:
+    - "5"
+    - "10"
+    - "25"
+    - "50"
+    - "100"
+  auxiliary:
+    - finger
+
+seed: 1
+
+audits:
+  annotation:
+    boundary_tolerance_px: 2.0
+  duplicate:
+    phash_resize: 64
+    phash_low_frequency_size: 16
+    top_k_pairs: 200
+    ssim_resize: 256
+  image_quality:
+    dark_pixel_max: 10
+    bright_pixel_min: 245
+    crop_padding_fraction: 0.05
+    robust_z_threshold: 3.5
+
+alc:
+  architecture: resnet50
+  image_size: 224
+  crop_padding_fraction: 0.08
+  posterior_sum_atol: 1.0e-6
+  training:
+    batch_size: 128
+    epochs: 30
+    base_lr: 0.1
+    momentum: 0.9
+    weight_decay: 1.0e-4
+    lr_milestones:
+      - 15
+      - 25
+    lr_decay: 0.1
+    num_workers: 0
+

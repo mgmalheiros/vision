@@ -1,0 +1,25 @@
+schema_version: 1
+producer: 05-image-quality.ipynb
+configuration:
+  path: curation/config.yaml
+  sha256: 24cb7bb3f27130d787ef0e071c9f28dcce3b923b7eb74bf8c3dc37acf0343a74
+inputs:
+  annotations_normalized:
+    path: curation/outputs/02-annotation-audit/annotations_normalized.csv
+    sha256: 5bd30f9f7cf713951a8173f22efd616ed21c7829c33873c43f595251ded29f2a
+  inventory:
+    path: curation/outputs/01-dataset-audit/inventory.csv
+    sha256: c9a61bca6dc320b3de9954c68c448698f60cad34065b4786ad8fc714098f28ce
+parameters:
+  dark_pixel_max: 10
+  bright_pixel_min: 245
+  crop_padding_fraction: 0.05
+  robust_z_threshold: 3.5
+artifacts:
+- image_quality_metrics.csv
+- image_quality_outliers.csv
+summary:
+  images_measured: 6021
+  coin_rois_measured: 21799
+  outlier_rows: 3036
+  images_flagged: 2698

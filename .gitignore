@@ -5,4 +5,5 @@ uv.lock
 
 # full "regression" dataset (6021 images, from IEEE Dataport) - local only, never versioned
 datasets/1-coins-full-*.zip
+datasets/1-coins-full-*
 prepared/1-coins-full-*

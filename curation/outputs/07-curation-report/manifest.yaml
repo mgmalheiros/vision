@@ -1,0 +1,57 @@
+schema_version: 1
+producer: 07-curation-report.ipynb
+configuration:
+  path: curation/config.yaml
+  sha256: 24cb7bb3f27130d787ef0e071c9f28dcce3b923b7eb74bf8c3dc37acf0343a74
+inputs:
+  alc_candidates:
+    path: curation/outputs/06-active-label-cleaning/alc_label_candidates.csv
+    sha256: 91199290619d9891a867f0d0d55c8ab79699bd55715fddc20bac63bb284d5528
+  annotation_findings:
+    path: curation/outputs/02-annotation-audit/annotation_findings.csv
+    sha256: e3669a22e52aaac6e6a421e628996d93e33ea203dc7f13bb0bde4079cef295be
+  duplicate_candidates:
+    path: curation/outputs/04-duplicate-analysis/duplicate_review_candidates.csv
+    sha256: 3851ba66f366d4e999471b7c3a00b13cb2a4afc16784573251c9cb72b9dd4ef8
+  exact_duplicates:
+    path: curation/outputs/04-duplicate-analysis/exact_duplicates.csv
+    sha256: 829f3b7f6fb12a6fcabd397177ec2344350dc303dc91d4c01bedbdfa2bf23b38
+  inventory:
+    path: curation/outputs/01-dataset-audit/inventory.csv
+    sha256: c9a61bca6dc320b3de9954c68c448698f60cad34065b4786ad8fc714098f28ce
+  manifest_01:
+    path: curation/outputs/01-dataset-audit/manifest.yaml
+    sha256: 15c0b39569840bd443bdc3600c3ef3ca1809126f6a13a62d116ad73b4023fe1d
+  manifest_02:
+    path: curation/outputs/02-annotation-audit/manifest.yaml
+    sha256: 49c1c4477c844c4b6e0af9e3919109aaeeeb446f8245f7176d64d8da56da6aab
+  manifest_03:
+    path: curation/outputs/03-class-distribution/manifest.yaml
+    sha256: 71b26a8f7c28474051a4068e390e88e18b149e397e7eccc6e674f71976efcc8d
+  manifest_04:
+    path: curation/outputs/04-duplicate-analysis/manifest.yaml
+    sha256: 32bae61ff49fc564bd91cb398e5f8cd43fcc6f7dd7f2f9878fabb0c1660e6327
+  manifest_05:
+    path: curation/outputs/05-image-quality/manifest.yaml
+    sha256: d1a259ae258b55988cce0ab94977403a209c06ee14d682ae4d86c6b19447cb9b
+  manifest_06:
+    path: curation/outputs/06-active-label-cleaning/manifest.yaml
+    sha256: 85e761f59b494be861b88ded53ff3b1899a0b0166fbc77f14fe958f594daa271
+  quality_outliers:
+    path: curation/outputs/05-image-quality/image_quality_outliers.csv
+    sha256: ad5f4c286e1953811874ea366dc4185a5ace3593b2a182d96a4707c2c473fbfa
+parameters:
+  human_decision_key: candidate_key
+  raw_data_mutation: false
+artifacts:
+- curated_manifest.csv
+- curation_log.csv
+- curation_queue.csv
+summary:
+  queue_items: 4145
+  objective_findings: 0
+  review_candidates: 4145
+  manual_status:
+    pending: 4145
+  images_kept: 6021
+  images_removed: 0

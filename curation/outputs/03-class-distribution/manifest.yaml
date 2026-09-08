@@ -1,0 +1,45 @@
+schema_version: 1
+producer: 03-class-distribution.ipynb
+configuration:
+  path: curation/config.yaml
+  sha256: 24cb7bb3f27130d787ef0e071c9f28dcce3b923b7eb74bf8c3dc37acf0343a74
+inputs:
+  annotations_normalized:
+    path: curation/outputs/02-annotation-audit/annotations_normalized.csv
+    sha256: 5bd30f9f7cf713951a8173f22efd616ed21c7829c33873c43f595251ded29f2a
+parameters:
+  coin_labels: &id001
+  - '5'
+  - '10'
+  - '25'
+  - '50'
+  - '100'
+  exclude_auxiliary_from_imbalance: true
+artifacts: []
+summary:
+  coin_labels: *id001
+  auxiliary_labels:
+  - finger
+  total_annotations: 21919
+  coin_annotations: 21799
+  annotated_images: 6021
+  images_with_multiple_annotations: 3009
+  coin_instance_imbalance_ratio_max_min: 8.721398305084746
+  coin_image_imbalance_ratio_max_min: 3.350635593220339
+  instance_counts:
+    '10': 7844
+    '100': 944
+    '25': 3007
+    '5': 8233
+    '50': 1771
+    finger: 120
+  coin_image_counts:
+    '5': 3163
+    '10': 2766
+    '25': 2013
+    '50': 1537
+    '100': 944
+  objects_per_image:
+    mean: 3.6404251785417703
+    median: 1.0
+    maximum: 14

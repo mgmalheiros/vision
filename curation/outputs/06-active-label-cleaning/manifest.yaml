@@ -1,0 +1,137 @@
+schema_version: 1
+producer: 06-active-label-cleaning.ipynb
+configuration:
+  path: curation/config.yaml
+  sha256: 24cb7bb3f27130d787ef0e071c9f28dcce3b923b7eb74bf8c3dc37acf0343a74
+inputs:
+  annotations_normalized:
+    path: curation/outputs/02-annotation-audit/annotations_normalized.csv
+    sha256: 30b50b2b6eca5716a5e3e95cbc292f43deddb080d82353f62969178779eec67d
+parameters:
+  seed: 1
+  architecture: resnet50
+  image_size: 224
+  crop_padding_fraction: 0.08
+  training: &id001
+    batch_size: 128
+    epochs: 30
+    base_lr: 0.1
+    momentum: 0.9
+    weight_decay: 0.0001
+    lr_milestones:
+    - 15
+    - 25
+    lr_decay: 0.1
+    num_workers: 0
+artifacts:
+- alc_label_candidates.csv
+- alc_selector_training_history.csv
+- cache/alc_selector_posteriors.npy
+- model/alc_vanilla_resnet50.pt
+summary:
+  samples: 21785
+  candidates: 908
+  candidate_rate: 0.04168005508377324
+  candidate_distribution_by_original_class:
+    '5': 73
+    '10': 381
+    '25': 430
+    '50': 19
+    '100': 5
+  confusion_matrix_original_by_predicted:
+    '5':
+      '5': 8155
+      '10': 11
+      '25': 61
+      '50': 1
+      '100': 0
+    '10':
+      '5': 33
+      '10': 7459
+      '25': 346
+      '50': 0
+      '100': 2
+    '25':
+      '5': 17
+      '10': 413
+      '25': 2573
+      '50': 0
+      '100': 0
+    '50':
+      '5': 2
+      '10': 13
+      '25': 4
+      '50': 1751
+      '100': 0
+    '100':
+      '5': 0
+      '10': 0
+      '25': 5
+      '50': 0
+      '100': 939
+  mean_phi_candidates: 1.1969385468135514
+  maximum_phi: 16.90061252700345
+compatibility:
+  samples:
+    count: 21785
+    fingerprint: d3d262ee74209b8773fe2a894fe4550b8840700760f03b9c6f53eaae2d86dd0d
+    fingerprint_columns:
+    - annotation_id
+    - relative_path
+    - shape_index
+    - original_label
+    - bbox_xmin
+    - bbox_ymin
+    - bbox_xmax
+    - bbox_ymax
+  model:
+    artifact: model/alc_vanilla_resnet50.pt
+    architecture: resnet50
+    classes:
+    - '5'
+    - '10'
+    - '25'
+    - '50'
+    - '100'
+    image_size: 224
+    training: *id001
+    load_validated: true
+    validation: payload metadata, ResNet-50 state_dict signature, embedded history
+  posterior:
+    artifact: cache/alc_selector_posteriors.npy
+    sample_fingerprint: d3d262ee74209b8773fe2a894fe4550b8840700760f03b9c6f53eaae2d86dd0d
+    shape:
+    - 21785
+    - 5
+    dtype: float64
+    sum_atol: 1.0e-06
+  candidates:
+    artifact: alc_label_candidates.csv
+    sample_fingerprint: d3d262ee74209b8773fe2a894fe4550b8840700760f03b9c6f53eaae2d86dd0d
+    schema:
+    - candidate_key
+    - priority_rank
+    - sample_id
+    - annotation_id
+    - relative_path
+    - shape_index
+    - bbox_xmin
+    - bbox_ymin
+    - bbox_xmax
+    - bbox_ymax
+    - original_label
+    - predicted_label
+    - probability_5
+    - probability_10
+    - probability_25
+    - probability_50
+    - probability_100
+    - predicted_confidence
+    - probability_original_label
+    - noisiness_ce
+    - ambiguity_entropy
+    - alc_phi
+    only_prediction_divergences: true
+    order:
+    - alc_phi descending
+    - sample_id ascending

@@ -1,0 +1,41 @@
+schema_version: 1
+producer: 01-dataset-audit.ipynb
+configuration:
+  path: curation/config.yaml
+  sha256: 24cb7bb3f27130d787ef0e071c9f28dcce3b923b7eb74bf8c3dc37acf0343a74
+inputs:
+  annotation_archive:
+    path: datasets/1-coins-full-annot.zip
+    sha256: e7954c733e7b89c44765f760e303e27adce5c8a037810a8abce7049bd602d1e5
+  image_archive:
+    path: datasets/1-coins-full-image.zip
+    sha256: 7b75212515e9b8e12f24f331ffa3171f8108f98f7aeea612172e85f50642b4ee
+parameters:
+  image_extensions:
+  - .bmp
+  - .jpeg
+  - .jpg
+  - .png
+  - .tif
+  - .tiff
+  - .webp
+  annotation_match_order:
+  - labelme_imagePath
+  - filename_stem
+artifacts:
+- annotation_index.csv
+- inventory.csv
+summary:
+  images: 6021
+  annotations: 6021
+  labelme_annotations: 6021
+  unreadable_images: 0
+  images_without_unique_annotation: 0
+  annotations_without_image: 0
+  labels_found:
+  - '10'
+  - '100'
+  - '25'
+  - '5'
+  - '50'
+  - finger
